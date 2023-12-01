@@ -61,24 +61,8 @@ convertion()'''
     
 def convertion_aller_plus_loin(): #Pour aller plus loin
     l = [
-        'AED', 'AFN', 'ALL', 'AMD', 'ANG', 'AOA', 'ARS', 'AUD', 'AWG', 'AZN',
-        'BAM', 'BBD', 'BDT', 'BGN', 'BHD', 'BIF', 'BMD', 'BND', 'BOB', 'BRL',
-        'BSD', 'BTN', 'BWP', 'BYN', 'BZD', 'CAD', 'CDF', 'CHF', 'CLP', 'CNY',
-        'COP', 'CRC', 'CUP', 'CVE', 'CZK', 'DJF', 'DKK', 'DOP', 'DZD', 'EGP',
-        'ERN', 'ETB', 'EUR', 'FJD', 'FKP', 'FOK', 'GBP', 'GEL', 'GGP', 'GHS',
-        'GIP', 'GMD', 'GNF', 'GTQ', 'GYD', 'HKD', 'HNL', 'HRK', 'HTG', 'HUF',
-        'IDR', 'ILS', 'IMP', 'INR', 'IQD', 'IRR', 'ISK', 'JEP', 'JMD', 'JOD',
-        'JPY', 'KES', 'KGS', 'KHR', 'KID', 'KRW', 'KWD', 'KYD', 'KZT', 'LAK',
-        'LBP', 'LKR', 'LRD', 'LSL', 'LYD', 'MAD', 'MDL', 'MGA', 'MKD', 'MMK',
-        'MNT', 'MOP', 'MRU', 'MUR', 'MVR', 'MWK', 'MXN', 'MYR', 'MZN', 'NAD',
-        'NGN', 'NIO', 'NOK', 'NPR', 'NZD', 'OMR', 'PAB', 'PEN', 'PGK', 'PHP',
-        'PKR', 'PLN', 'PYG', 'QAR', 'RON', 'RSD', 'RUB', 'RWF', 'SAR', 'SBD',
-        'SCR', 'SDG', 'SEK', 'SGD', 'SHP', 'SLL', 'SOS', 'SPL', 'SRD', 'STN',
-        'SVC', 'SYP', 'SZL', 'THB', 'TJS', 'TMT', 'TND', 'TOP', 'TRY', 'TTD',
-        'TVD', 'TWD', 'TZS', 'UAH', 'UGX', 'USD', 'UYU', 'UZS', 'VES', 'VND',
-        'VUV', 'WST', 'XAF', 'XCD', 'XDR', 'XOF', 'XPF', 'YER', 'ZAR', 'ZMW',
-        'ZWD'
-    ]
+        "EUR","IDR","BGN","ILS", "GBP","DKK","CAD","JPY","HUF","RON","MYR","SEK","SGD","HKD","AUD","CHF","KRW" ,"CNY","TRY","HRK","NZD","THB","USD","NOK","RUB","INR","MXN","CZK","BRL","PLN","PHP","ZAR" 
+        ]
     somme2 = float(input("Entrer une somme d'argent à convertir : "))
 
     monnaie3 = str(input("Entrer la monnaie de conversion ('USD','EUR',INR, etc) : ")).upper()
@@ -93,6 +77,11 @@ def convertion_aller_plus_loin(): #Pour aller plus loin
         if a == "n":
             print("Dans ce cas , entrer une devise existante.")
             exit()
+
+    else:
+        convertion_monnaie = ratio.convert('EUR', str(monnaie3),somme2)
+        print(convertion_monnaie)
+
         
 
 convertion_aller_plus_loin()
